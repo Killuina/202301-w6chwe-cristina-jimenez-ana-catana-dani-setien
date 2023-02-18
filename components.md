@@ -33,7 +33,6 @@
 
 # Button
 
-- Shows "Delete"/"Create" message (?)
 - Receives an action
 - On click executes the received action
 
