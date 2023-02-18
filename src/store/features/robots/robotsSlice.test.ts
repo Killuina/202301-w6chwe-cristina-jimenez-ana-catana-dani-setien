@@ -5,9 +5,10 @@ describe("Given a robotsReducer function", () => {
     test("Then it should return a list of two robots", () => {
       const robots = [
         {
+          id: "henlo",
           name: "CyBot",
           image: "",
-          attributs: {
+          attributes: {
             speed: 3,
             resistance: 4,
             creationDate: "2010-01-01",
@@ -17,9 +18,10 @@ describe("Given a robotsReducer function", () => {
 
       const expectedRobots = [
         {
+          id: "henlo",
           name: "CyBot",
           image: "",
-          attributs: {
+          attributes: {
             speed: 3,
             resistance: 4,
             creationDate: "2010-01-01",
