@@ -3,8 +3,7 @@ const hardCodedData = {
     {
       _id: { $oid: "63efcf45e871c66135a96f55" },
       name: "C-3PO",
-      image:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Ffoto%2Fc-3po-gm477975108-67478735&psig=AOvVaw0gWcxTU3gF-q3GZEGoSKpb&ust=1676743011682000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPD_zM6Qnf0CFQAAAAAdAAAAABAE",
+      image: "https://tinyurl.com/4ehhex6d",
       attributes: {
         speed: { $numberInt: "4" },
         resistance: { $numberInt: "7" },
