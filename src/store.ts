@@ -17,3 +17,16 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+
+export const robotsHardcoded = [
+  {
+    id: "63efcf45e871c66135a96f55",
+    name: "C-3PO",
+    image: "https://tinyurl.com/4ehhex6d",
+    attributes: {
+      speed: 4,
+      resistance: 7,
+      creationDate: "34 BBY",
+    },
+  },
+];
