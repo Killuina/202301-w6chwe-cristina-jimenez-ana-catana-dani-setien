@@ -19,9 +19,14 @@ const RobotCard = ({
 }: RobotCardProps) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardMedia sx={{ height: 140 }} image={image} title={name} />
+      <CardMedia
+        sx={{ height: 140 }}
+        image={image}
+        alt={name}
+        component="img"
+      />
       <CardContent>
-        <Typography gutterBottom variant="h2" component="div">
+        <Typography gutterBottom variant="h5" component="h2">
           {name}
         </Typography>
         <Typography variant="body2" color="text.secondary">

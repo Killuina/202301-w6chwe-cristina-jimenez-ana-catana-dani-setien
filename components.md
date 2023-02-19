@@ -29,7 +29,8 @@
 - Show button to delete robot
 - Show button to modify robot
 - Show robot name on a heading
-- Show robot image, speed, endurance, and creation date
+- Show robot image
+- Show robot data
 
 # Button
 
