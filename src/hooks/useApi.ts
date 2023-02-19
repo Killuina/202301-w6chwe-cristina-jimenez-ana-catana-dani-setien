@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { ApiResponseStructure } from "../../data/types";
-import { loadRobotsActionCreator } from "../features/robots/robotsSlice";
+import { ApiResponseStructure } from "../data/types";
+import { loadRobotsActionCreator } from "../store/features/robots/robotsSlice";
 
 const useApi = () => {
   const urlApi = process.env.REACT_APP_URL_API!;
