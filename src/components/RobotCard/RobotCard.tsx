@@ -18,34 +18,32 @@ const RobotCard = ({
   },
 }: RobotCardProps) => {
   return (
-    <li>
-      <Card sx={{ width: 255, m: 2 }}>
-        <CardMedia
-          sx={{ height: 140 }}
-          image={image}
-          alt={name}
-          component="img"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Resistance:{resistance}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Speed:{speed}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {creationDate}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button variant="outlined">Delete</Button>
-          <Button variant="outlined">Edit</Button>
-        </CardActions>
-      </Card>
-    </li>
+    <Card sx={{ width: 255, m: 2 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image={image}
+        alt={name}
+        component="img"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="h2">
+          {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Resistance:{resistance}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Speed:{speed}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {creationDate}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button variant="outlined">Delete</Button>
+        <Button variant="outlined">Edit</Button>
+      </CardActions>
+    </Card>
   );
 };
 

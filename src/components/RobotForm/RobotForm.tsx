@@ -51,44 +51,50 @@ const RobotForm = (): JSX.Element => {
   };
 
   return (
-    <form className="form" autoComplete="off" onSubmit={handleSubmit}>
-      <label htmlFor="to-do">New Robot: </label>
-      <input
-        type="text"
-        id="name"
-        onChange={handleNameChange}
-        value={nameValue}
-        placeholder="Set a new task"
-        required
-      ></input>
-      <input
-        type="text"
-        id="image"
-        onChange={handleImageChange}
-        value={imageValue}
-        placeholder="Set a new task"
-        required
-      ></input>
-      <input
-        type="text"
-        id="speed"
-        onChange={handleSpeedChange}
-        value={speedValue}
-        placeholder="Set a new task"
-        required
-      ></input>
-      <input
-        type="text"
-        id="resistance"
-        onChange={handleResistanceChange}
-        value={resistanceValue}
-        placeholder="Set a new task"
-        required
-      ></input>
-      <button type="submit" className="form__button">
-        Add robot
-      </button>
-    </form>
+    <>
+      <h3 className="form-title">New Robot: </h3>
+      <form className="form" autoComplete="off" onSubmit={handleSubmit}>
+        <label htmlFor="name">Name: </label>
+        <input
+          type="text"
+          id="name"
+          onChange={handleNameChange}
+          value={nameValue}
+          placeholder="name"
+          required
+        ></input>
+        <label htmlFor="image">Image: </label>
+        <input
+          type="text"
+          id="image"
+          onChange={handleImageChange}
+          value={imageValue}
+          placeholder="image url"
+          required
+        ></input>
+        <label htmlFor="speed">Speed: </label>
+        <input
+          type="text"
+          id="speed"
+          onChange={handleSpeedChange}
+          value={speedValue}
+          placeholder="speed"
+          required
+        ></input>
+        <label htmlFor="resistance">Resistance: </label>
+        <input
+          type="text"
+          id="resistance"
+          onChange={handleResistanceChange}
+          value={resistanceValue}
+          placeholder="resistance"
+          required
+        ></input>
+        <button type="submit" className="form__button">
+          Add robot
+        </button>
+      </form>
+    </>
   );
 };
 
