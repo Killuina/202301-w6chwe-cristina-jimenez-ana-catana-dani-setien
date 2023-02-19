@@ -1,6 +1,9 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { ApiResponseStructure, RobotStructure } from "../data/types";
+import {
+  ApiResponseStructure,
+  UnidentifiedRobotStructure,
+} from "../data/types";
 import { loadRobotsActionCreator } from "../store/features/robots/robotsSlice";
 
 const useApi = () => {
@@ -23,10 +26,8 @@ const useApi = () => {
   const addRobot = async ({
     name,
     image,
-    attributes: { resistance, speed },
-  }: RobotStructure) => {
-    const creationDate = new Date().toDateString();
-
+    attributes: { resistance, speed, creationDate },
+  }: UnidentifiedRobotStructure) => {
     try {
       await fetch(urlApi, {
         method: "POST",
@@ -36,7 +37,7 @@ const useApi = () => {
           attributes: {
             resistance: resistance,
             speed: speed,
-            creationDate: { creationDate },
+            creationDate: creationDate,
           },
         }),
         headers: {

@@ -4,15 +4,18 @@ export interface RobotAttributes {
   creationDate: string;
 }
 
-export interface RobotStructure {
+export interface RobotStructure extends UnidentifiedRobotStructure {
   id: string;
-  name: string;
-  image: string;
-  attributes: RobotAttributes;
 }
 
 export type Robots = RobotStructure[];
 
 export interface ApiResponseStructure {
   robots: Robots;
+}
+
+export interface UnidentifiedRobotStructure {
+  name: string;
+  image: string;
+  attributes: RobotAttributes;
 }
