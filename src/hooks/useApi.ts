@@ -48,7 +48,7 @@ const useApi = () => {
     }
   };
 
-  return { loadRobots: getRobots, addRobot };
+  return { getRobots, addRobot };
 };
 
 export default useApi;
