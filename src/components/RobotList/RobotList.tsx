@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAppSelector } from "../../store/hooks";
-import useApi from "../../store/hooks/useApi";
+import useApi from "../../hooks/useApi";
 import RobotCard from "../RobotCard/RobotCard";
 
 const RobotList = (): JSX.Element => {

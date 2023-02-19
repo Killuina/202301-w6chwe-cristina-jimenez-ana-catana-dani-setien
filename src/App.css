@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app__title {
+  margin-top: 3rem;
+  width: 100vw;
+  background-color: rgb(241, 240, 240);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
