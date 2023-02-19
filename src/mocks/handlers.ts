@@ -1,5 +1,5 @@
 import { rest } from "msw";
-import { robotsHardcoded } from "../store";
+import { robotsHardcoded } from "../store/store";
 
 const apiUrl = process.env.REACT_APP_URL_API!;
 

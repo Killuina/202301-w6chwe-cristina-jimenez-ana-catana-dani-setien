@@ -1,6 +1,9 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { ApiResponseStructure } from "../data/types";
+import {
+  ApiResponseStructure,
+  UnidentifiedRobotStructure,
+} from "../data/types";
 import { loadRobotsActionCreator } from "../store/features/robots/robotsSlice";
 
 const useApi = () => {
@@ -8,7 +11,7 @@ const useApi = () => {
 
   const dispatch = useDispatch();
 
-  const loadRobots = useCallback(async () => {
+  const getRobots = useCallback(async () => {
     try {
       const response = await fetch(urlApi);
 
@@ -20,7 +23,33 @@ const useApi = () => {
     }
   }, [urlApi, dispatch]);
 
-  return { loadRobots };
+  const addRobot = async ({
+    name,
+    image,
+    attributes: { resistance, speed, creationDate },
+  }: UnidentifiedRobotStructure) => {
+    try {
+      await fetch(urlApi, {
+        method: "POST",
+        body: JSON.stringify({
+          name: name,
+          image: image,
+          attributes: {
+            resistance: resistance,
+            speed: speed,
+            creationDate: creationDate,
+          },
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+    } catch (error) {
+      return (error as Error).message;
+    }
+  };
+
+  return { getRobots, addRobot };
 };
 
 export default useApi;
