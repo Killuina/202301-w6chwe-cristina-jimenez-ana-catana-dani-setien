@@ -29,7 +29,7 @@ const useApi = () => {
     attributes: { resistance, speed, creationDate },
   }: UnidentifiedRobotStructure) => {
     try {
-      await fetch(urlApi, {
+      await fetch(`${urlApi}/create`, {
         method: "POST",
         body: JSON.stringify({
           name: name,
